@@ -9,14 +9,6 @@ pipeline {
           HOME = '.'
      }
      stages {
-          stage('Debug') {
-                 steps {
-                     script {
-                         echo "Current workspace: ${env.WORKSPACE}"
-                         echo "Current directory: ${pwd()}"
-                     }
-                 }
-          }
           stage('Source') {
                steps {
                     git branch: 'main',

@@ -1,13 +1,9 @@
 FROM openjdk:17-jdk-slim
 COPY target/book-1.0.jar book.jar
-#book-1.0 is in this local PC
-#book.jar => name of jarfile that will store on container
 EXPOSE 8090
-#port
 ENTRYPOINT ["java","-jar","/book.jar"]
-#after using docker run command it will call java -jar which is run java and the input will be jarFile
 
-# infrastructure as code #
+# infrastructure #
 
 #FROM - what to use as a base image/system
 #COPY - copy from this directory to the container directory
